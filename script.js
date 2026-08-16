@@ -27,16 +27,11 @@ Edit the "mediaTeam" section.
 const events = [
 
   {
-    title: "Youth Event",
-
-    date: "COMING SOON",
-
-    description:
-      "Replace this with your upcoming event details.",
-
-    image:
-      "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=80"
-  },
+  title: "Youth Event",
+  date: "COMING SOON",
+  description: "Replace this with your upcoming event details.",
+  image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&q=80"
+}
 
 
   {
