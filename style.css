@@ -1,1065 +1,468 @@
 /* =========================================
-   CTT YOUTH MEDIA
-   Main colours:
-   Dark Red + White
+   CTT YOUTH MEDIA – Main Styles
 ========================================= */
 
-
+/* ----- RESET & VARIABLES ----- */
 :root {
-
   --bg: #ffffff;
-
   --surface: #f7f7f7;
-
   --surface-2: #eeeeee;
-
   --text: #171717;
-
   --muted: #666666;
-
   --red: #8f1111;
-
   --red-dark: #5d0909;
-
   --border: #dddddd;
-
-  --shadow:
-    0 18px 50px rgba(0, 0, 0, 0.10);
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.10);
+  --radius: 18px;
+  --transition: 0.25s ease;
 }
-
-
-/* =========================================
-   DARK THEME
-========================================= */
 
 [data-theme="dark"] {
-
   --bg: #090909;
-
   --surface: #111111;
-
   --surface-2: #181818;
-
   --text: #f7f7f7;
-
   --muted: #b5b5b5;
-
   --red: #c32929;
-
   --red-dark: #8e1717;
-
   --border: #2d2d2d;
-
-  --shadow:
-    0 18px 50px rgba(0, 0, 0, 0.35);
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
 }
 
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-
-/* =========================================
-   RESET
-========================================= */
-
-* {
-  box-sizing: border-box;
-}
-
-
-html {
-  scroll-behavior: smooth;
-}
-
+html { scroll-behavior: smooth; }
 
 body {
-
-  margin: 0;
-
-  font-family:
-    Inter,
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    sans-serif;
-
+  font-family: Inter, system-ui, -apple-system, sans-serif;
   background: var(--bg);
-
   color: var(--text);
-
   line-height: 1.6;
-
-  transition:
-    background 0.25s,
-    color 0.25s;
+  transition: background var(--transition), color var(--transition);
 }
 
+a { color: inherit; text-decoration: none; }
+button, input { font: inherit; border: none; background: none; }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-
-button,
-input {
-  font: inherit;
-}
-
-
-
-/* =========================================
-   HEADER
-========================================= */
-
+/* ----- HEADER ----- */
 .site-header {
-
   position: sticky;
-
   top: 0;
-
   z-index: 20;
-
   min-height: 72px;
-
-  padding:
-    12px 5%;
-
+  padding: 12px 5%;
   display: flex;
-
   align-items: center;
-
   gap: 24px;
-
-  background:
-    color-mix(
-      in srgb,
-      var(--bg) 92%,
-      transparent
-    );
-
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
   backdrop-filter: blur(12px);
-
-  border-bottom:
-    1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
-
 
 .brand {
-
   display: flex;
-
   align-items: center;
-
   gap: 10px;
-
   margin-right: auto;
 }
 
-
 .brand-mark {
-
   width: 42px;
-
   height: 42px;
-
   display: grid;
-
   place-items: center;
-
   border-radius: 10px;
-
   background: var(--red);
-
-  color: white;
-
+  color: #fff;
   font-weight: 900;
 }
 
-
-.brand-text strong,
-.brand-text small {
-
-  display: block;
-
-  line-height: 1.05;
-}
-
-
-.brand-text strong {
-
-  letter-spacing: 1px;
-}
-
-
-.brand-text small {
-
-  color: var(--red);
-
-  font-weight: 800;
-
-  margin-top: 3px;
-}
-
-
-
-/* Navigation */
+.brand-text strong { display: block; line-height: 1.05; letter-spacing: 1px; }
+.brand-text small { display: block; color: var(--red); font-weight: 800; margin-top: 3px; }
 
 nav {
-
   display: flex;
-
   gap: 18px;
-
   font-size: 0.92rem;
+  flex-wrap: wrap;
 }
-
-
-nav a:hover {
-
-  color: var(--red);
-}
-
-
-
-/* Theme button */
+nav a:hover { color: var(--red); }
 
 .theme-toggle {
-
-  border:
-    1px solid var(--border);
-
-  background:
-    var(--surface);
-
-  color:
-    var(--text);
-
   width: 42px;
-
   height: 42px;
-
   border-radius: 50%;
-
-  cursor: pointer;
-
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
   font-size: 18px;
-}
-
-
-
-/* =========================================
-   HERO
-========================================= */
-
-.hero {
-
-  min-height: 620px;
-
-  padding:
-    90px 7%;
-
+  cursor: pointer;
   display: grid;
-
-  grid-template-columns:
-    1.4fr 0.6fr;
-
-  align-items: center;
-
-  gap: 60px;
-
-  background:
-    radial-gradient(
-      circle at 90% 20%,
-      rgba(143, 17, 17, 0.24),
-      transparent 35%
-    );
+  place-items: center;
 }
 
+/* ----- HERO ----- */
+.hero {
+  min-height: 620px;
+  padding: 90px 7%;
+  display: grid;
+  grid-template-columns: 1.4fr 0.6fr;
+  align-items: center;
+  gap: 60px;
+  background: radial-gradient(circle at 90% 20%, rgba(143,17,17,0.24), transparent 35%);
+}
+
+.hero-copy { max-width: 100%; }
 
 .eyebrow {
-
   color: var(--red);
-
   font-size: 0.76rem;
-
   font-weight: 900;
-
   letter-spacing: 2px;
-
-  margin:
-    0 0 10px;
+  margin-bottom: 10px;
 }
-
 
 h1 {
-
-  font-size:
-    clamp(3rem, 8vw, 6.5rem);
-
+  font-size: clamp(3rem, 8vw, 6.5rem);
   line-height: 0.95;
-
   letter-spacing: -4px;
-
-  margin:
-    0 0 24px;
-
-  max-width: 850px;
+  margin-bottom: 24px;
 }
-
-
-h1 span {
-
-  color: var(--red);
-}
-
+h1 span { color: var(--red); }
 
 .hero-text {
-
-  max-width: 650px;
-
   color: var(--muted);
-
   font-size: 1.12rem;
+  max-width: 650px;
 }
-
 
 .hero-actions {
-
   display: flex;
-
   gap: 12px;
-
   margin-top: 30px;
-}
-
-
-
-/* =========================================
-   BUTTONS
-========================================= */
-
-.btn {
-
-  display: inline-flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  padding:
-    12px 18px;
-
-  border-radius: 9px;
-
-  border:
-    1px solid var(--border);
-
-  font-weight: 800;
-
-  cursor: pointer;
-}
-
-
-.btn.primary {
-
-  background: var(--red);
-
-  color: white;
-
-  border-color: var(--red);
-}
-
-
-.btn.primary:hover {
-
-  background: var(--red-dark);
-}
-
-
-.btn.secondary {
-
-  background: var(--surface);
-}
-
-
-
-/* =========================================
-   HERO CARD
-========================================= */
-
-.hero-card {
-
-  padding: 28px;
-
-  background:
-    var(--surface);
-
-  border:
-    1px solid var(--border);
-
-  border-radius: 18px;
-
-  box-shadow: var(--shadow);
-
-  border-top:
-    5px solid var(--red);
-}
-
-
-.live-status {
-
-  color: var(--red);
-
-  font-weight: 900;
-
-  letter-spacing: 1px;
-}
-
-
-.live-dot {
-
-  display: inline-block;
-
-  width: 10px;
-
-  height: 10px;
-
-  border-radius: 50%;
-
-  background: var(--red);
-
-  margin-right: 8px;
-}
-
-
-.hero-card h3 {
-
-  font-size: 1.5rem;
-
-  margin:
-    8px 0;
-}
-
-
-.service-mini {
-
-  display: flex;
-
-  justify-content: space-between;
-
-  padding:
-    16px 0;
-
-  border-top:
-    1px solid var(--border);
-
-  gap: 15px;
-}
-
-
-.service-mini b {
-
-  color: var(--red);
-}
-
-
-
-/* =========================================
-   SECTIONS
-========================================= */
-
-.section {
-
-  padding:
-    90px 7%;
-}
-
-
-.section.alt {
-
-  background:
-    var(--surface);
-}
-
-
-.section-heading {
-
-  margin-bottom: 35px;
-
-  max-width: 760px;
-}
-
-
-.section-heading p:last-child {
-
-  color: var(--muted);
-}
-
-
-h2 {
-
-  font-size:
-    clamp(2rem, 4vw, 3.4rem);
-
-  line-height: 1.05;
-
-  margin:
-    0 0 14px;
-}
-
-
-h3 {
-
-  font-size: 1.5rem;
-
-  margin:
-    8px 0;
-}
-
-
-code {
-
-  color: var(--red);
-}
-
-
-
-/* =========================================
-   PREACHER
-========================================= */
-
-.preacher-card {
-
-  display: grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
-  overflow: hidden;
-
-  background:
-    var(--surface);
-
-  border:
-    1px solid var(--border);
-
-  border-radius: 18px;
-
-  box-shadow:
-    var(--shadow);
-}
-
-
-.image-placeholder {
-
-  min-height: 380px;
-
-  display: grid;
-
-  place-items: center;
-
-  background:
-    linear-gradient(
-      135deg,
-      var(--red-dark),
-      #171717
-    );
-
-  color: white;
-
-  font-weight: 900;
-
-  letter-spacing: 2px;
-}
-
-
-.preacher-info {
-
-  padding: 42px;
-}
-
-
-.tag {
-
-  color: var(--red);
-
-  font-weight: 900;
-
-  font-size: 0.78rem;
-
-  letter-spacing: 1.5px;
-}
-
-
-.info-row {
-
-  display: flex;
-
-  justify-content: space-between;
-
-  gap: 20px;
-
-  padding:
-    12px 0;
-
-  border-top:
-    1px solid var(--border);
-}
-
-
-.info-row span {
-
-  color: var(--muted);
-
-  text-align: right;
-}
-
-
-
-/* =========================================
-   EVENTS
-========================================= */
-
-.cards-grid {
-
-  display: grid;
-
-  grid-template-columns:
-    repeat(3, 1fr);
-
-  gap: 22px;
-}
-
-
-.event-card {
-
-  overflow: hidden;
-
-  background:
-    var(--bg);
-
-  border:
-    1px solid var(--border);
-
-  border-radius: 16px;
-}
-
-
-.event-card img {
-
-  width: 100%;
-
-  height: 210px;
-
-  object-fit: cover;
-
-  display: block;
-}
-
-
-.event-body {
-
-  padding: 20px;
-}
-
-
-.event-date {
-
-  color: var(--red);
-
-  font-weight: 900;
-
-  font-size: 0.8rem;
-}
-
-
-.event-body p {
-
-  color: var(--muted);
-}
-
-
-
-/* =========================================
-   MEDIA TEAM
-========================================= */
-
-.team-grid {
-
-  display: grid;
-
-  grid-template-columns:
-    repeat(4, 1fr);
-
-  gap: 16px;
-}
-
-
-.team-card {
-
-  padding: 22px;
-
-  border:
-    1px solid var(--border);
-
-  border-radius: 14px;
-
-  background:
-    var(--surface);
-}
-
-
-.team-avatar {
-
-  width: 54px;
-
-  height: 54px;
-
-  border-radius: 50%;
-
-  background: var(--red);
-
-  color: white;
-
-  display: grid;
-
-  place-items: center;
-
-  font-weight: 900;
-
-  margin-bottom: 18px;
-}
-
-
-.team-card p {
-
-  color: var(--red);
-
-  font-weight: 800;
-
-  margin: 0;
-
-  font-size: 0.85rem;
-}
-
-
-
-/* =========================================
-   CHAT BOT
-========================================= */
-
-.chat-shell {
-
-  max-width: 900px;
-
-  overflow: hidden;
-
-  background:
-    var(--surface);
-
-  border:
-    1px solid var(--border);
-
-  border-radius: 18px;
-
-  box-shadow:
-    var(--shadow);
-}
-
-
-.chat-messages {
-
-  min-height: 280px;
-
-  max-height: 430px;
-
-  overflow: auto;
-
-  padding: 24px;
-
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 12px;
-}
-
-
-.message {
-
-  max-width: 78%;
-
-  padding:
-    12px 15px;
-
-  border-radius: 13px;
-
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 4px;
-}
-
-
-.message.bot {
-
-  background:
-    var(--surface-2);
-
-  align-self: flex-start;
-}
-
-
-.message.user {
-
-  background:
-    var(--red);
-
-  color: white;
-
-  align-self: flex-end;
-}
-
-
-.message span {
-
-  font-size: 0.95rem;
-}
-
-
-
-/* Quick Questions */
-
-.quick-questions {
-
-  padding:
-    0 24px 18px;
-
-  display: flex;
-
-  gap: 8px;
-
   flex-wrap: wrap;
 }
 
-
-.quick-questions button {
-
-  border:
-    1px solid var(--border);
-
-  background:
-    var(--bg);
-
-  color:
-    var(--text);
-
-  border-radius: 999px;
-
-  padding:
-    8px 12px;
-
-  cursor: pointer;
+.hero-card {
+  padding: 28px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border-top: 5px solid var(--red);
 }
 
+.live-status {
+  color: var(--red);
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+.live-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--red);
+  margin-right: 8px;
+}
+.hero-card h3 { font-size: 1.5rem; margin: 8px 0; }
+.service-mini {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-top: 1px solid var(--border);
+}
+.service-mini b { color: var(--red); }
 
+/* ----- BUTTONS ----- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  border-radius: 9px;
+  border: 1px solid var(--border);
+  font-weight: 800;
+  cursor: pointer;
+  transition: background var(--transition), border-color var(--transition);
+}
+.btn.primary {
+  background: var(--red);
+  color: #fff;
+  border-color: var(--red);
+}
+.btn.primary:hover { background: var(--red-dark); }
+.btn.secondary { background: var(--surface); }
 
-/* Chat Input */
+/* ----- SECTIONS ----- */
+.section {
+  padding: 90px 7%;
+}
+.section.alt {
+  background: var(--surface);
+}
+.section-heading {
+  margin-bottom: 35px;
+  max-width: 760px;
+}
+.section-heading p:last-child { color: var(--muted); }
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1.05;
+  margin-bottom: 14px;
+}
+h3 { font-size: 1.5rem; margin: 8px 0; }
+code { color: var(--red); }
+
+/* ----- PREACHER ----- */
+.preacher-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.image-placeholder {
+  min-height: 380px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--red-dark), #171717);
+  color: #fff;
+  font-weight: 900;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+}
+
+.preacher-info {
+  padding: 42px;
+}
+.tag {
+  display: inline-block;
+  background: var(--red);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 20px;
+  letter-spacing: 1px;
+}
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+.info-row:last-child { border-bottom: none; }
+.info-row strong { color: var(--red); }
+
+/* ----- EVENTS GRID ----- */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.event-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s;
+}
+.event-card:hover { transform: translateY(-6px); }
+.event-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+.event-body {
+  padding: 20px;
+}
+.event-date {
+  color: var(--red);
+  font-weight: 800;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+/* ----- TEAM GRID ----- */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 30px;
+}
+
+.team-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 16px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s;
+}
+.team-card:hover { transform: translateY(-4px); }
+
+.team-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--red);
+  color: #fff;
+  font-weight: 900;
+  font-size: 1.8rem;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 12px;
+}
+.team-card h3 { font-size: 1.1rem; }
+.team-card p { color: var(--muted); font-size: 0.9rem; }
+
+/* ----- CHAT ----- */
+.chat-shell {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+  max-width: 700px;
+}
+
+.chat-messages {
+  height: 240px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-right: 8px;
+  margin-bottom: 16px;
+}
+
+.message {
+  padding: 10px 16px;
+  border-radius: 12px;
+  max-width: 80%;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+}
+.message.bot {
+  align-self: flex-start;
+  background: var(--surface);
+}
+.message.user {
+  align-self: flex-end;
+  background: var(--red);
+  color: #fff;
+  border-color: var(--red);
+}
+.message b { display: block; font-size: 0.75rem; opacity: 0.7; }
+.message span { display: block; word-break: break-word; }
+
+.quick-questions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.quick-questions button {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.quick-questions button:hover {
+  background: var(--red);
+  color: #fff;
+  border-color: var(--red);
+}
 
 .chat-input {
-
   display: flex;
-
-  padding: 16px;
-
   gap: 10px;
-
-  border-top:
-    1px solid var(--border);
 }
-
-
 .chat-input input {
-
   flex: 1;
-
-  border:
-    1px solid var(--border);
-
-  background:
-    var(--bg);
-
-  color:
-    var(--text);
-
+  padding: 10px 16px;
+  border: 1px solid var(--border);
   border-radius: 9px;
-
-  padding: 12px;
-
-  outline: none;
-}
-
-
-
-/* =========================================
-   ADMIN
-========================================= */
-
-.admin-section {
-
-  padding-top: 20px;
-}
-
-
-.admin-card {
-
-  padding: 36px;
-
-  display: flex;
-
-  justify-content: space-between;
-
-  align-items: center;
-
-  gap: 25px;
-
-  background:
-    var(--surface);
-
-  border:
-    1px solid var(--border);
-
-  border-left:
-    5px solid var(--red);
-
-  border-radius: 18px;
-
-  box-shadow:
-    var(--shadow);
-}
-
-
-.admin-email {
-
-  font-weight: 900;
-
-  color: var(--red);
-}
-
-
-
-/* =========================================
-   FOOTER
-========================================= */
-
-footer {
-
-  padding:
-    35px 7%;
-
-  display: flex;
-
-  justify-content: space-between;
-
-  gap: 20px;
-
-  border-top:
-    1px solid var(--border);
-
-  color: var(--muted);
-}
-
-
-footer strong {
-
+  background: var(--bg);
   color: var(--text);
 }
-
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 850px) {
-
-  nav {
-    display: none;
-  }
-
-
-  .hero {
-
-    grid-template-columns: 1fr;
-
-    padding-top: 65px;
-  }
-
-
-  .preacher-card {
-
-    grid-template-columns: 1fr;
-  }
-
-
-  .cards-grid {
-
-    grid-template-columns: 1fr;
-  }
-
-
-  .team-grid {
-
-    grid-template-columns:
-      repeat(2, 1fr);
-  }
-
-
-  .admin-card,
-  footer {
-
-    flex-direction: column;
-
-    align-items: flex-start;
-  }
-
+.chat-input input:focus {
+  outline: 2px solid var(--red);
+  outline-offset: 2px;
 }
 
+/* ----- ADMIN ----- */
+.admin-section {
+  background: var(--surface);
+}
+.admin-card {
+  max-width: 700px;
+  margin: 0 auto;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 48px 40px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+.admin-email {
+  font-weight: 800;
+  color: var(--red);
+  font-size: 1.2rem;
+  margin: 16px 0;
+}
 
-@media (max-width: 480px) {
+/* ----- FOOTER ----- */
+footer {
+  padding: 40px 7%;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  background: var(--bg);
+}
+footer strong { font-size: 1.2rem; }
+footer p { color: var(--muted); margin: 4px 0; }
 
-  .site-header {
-
-    padding:
-      10px 4%;
-  }
-
-
-  .section,
+/* ----- RESPONSIVE ----- */
+@media (max-width: 1000px) {
   .hero {
-
-    padding-left: 5%;
-
-    padding-right: 5%;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 60px 5%;
   }
-
-
-  h1 {
-
-    letter-spacing: -2px;
-  }
-
-
-  .team-grid {
-
+  .preacher-card {
     grid-template-columns: 1fr;
   }
+  .image-placeholder { min-height: 200px; }
+}
 
-
-  .hero-actions {
-
-    flex-direction: column;
+@media (max-width: 700px) {
+  .site-header {
+    flex-wrap: wrap;
+    gap: 12px;
   }
-
+  .brand { margin-right: 0; }
+  nav { order: 3; width: 100%; justify-content: center; gap: 12px; }
+  .theme-toggle { margin-left: auto; }
+  .hero-actions { flex-direction: column; align-items: stretch; }
+  .hero-card { padding: 20px; }
+  .section { padding: 60px 5%; }
+  .preacher-info { padding: 24px; }
+  .admin-card { padding: 30px 20px; }
+  footer { flex-direction: column; text-align: center; }
+  .chat-shell { padding: 16px; }
 }
