@@ -29,20 +29,20 @@ const events = [
   {
   title: "Youth Event",
   date: "COMING SOON",
-  description: "Replace this with your upcoming event details.",
+  description: "YOUTH WORSHIP NIGHT is an event where we come to praise, worship and Pray to God.",
   image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&q=80"
 }
 
 
   {
-    title: "Youth Gathering",
+    title: "Teens Hangout",
 
     date: "DATE TO BE ADDED",
 
     description:
-      "Add your event information here.",
+      "Teens hangout is an event where Teens come for a weekly hangout.",
 
-      "image: "https://i.ibb.co/8ntTW2Wm/photo-1522158637959-30385a09e0da.jpg"}
+      image: "https://i.ibb.co/8ntTW2Wm/photo-1522158637959-30385a09e0da.jpg"}
 
 ];
 
