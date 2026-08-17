@@ -1,4 +1,4 @@
-/*
+u/*
 ==================================================
 CTT YOUTH MEDIA
 ==================================================
@@ -42,9 +42,7 @@ const events = [
     description:
       "Add your event information here.",
 
-    image:
-      "https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=1200&q=80"
-  }
+      "image: "https://i.ibb.co/8ntTW2Wm/photo-1522158637959-30385a09e0da.jpg"}
 
 ];
 
