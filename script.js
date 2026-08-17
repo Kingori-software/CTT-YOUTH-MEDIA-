@@ -22,10 +22,10 @@ const events = [
 
 // ---------- MEDIA TEAM DATA ----------
 const mediaTeam = [
-  { name: "Media Person 1", role: "Camera" },
-  { name: "Media Person 2", role: "Live / Screens" },
+  { name: "Media Person 1", role: "Sound" },
+  { name: "Media Person 2", role: "Projection" },
   { name: "Media Person 3", role: "Photography" },
-  { name: "Media Person 4", role: "Social Media" }
+  { name: "Media Person 4", role: "Stage Management" }
 ];
 
 // ---------- BOT ANSWERS ----------
