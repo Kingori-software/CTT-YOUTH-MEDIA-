@@ -10,7 +10,7 @@ const events = [
     title: "Worship Night",
     date: "21 st AUGUST",
     description: "YOUTH WORSHIP NIGHT is an event where we come to worship, praise and pray to God.",
-    image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80"
+    image: "https://i.ibb.co/nswf3VYJ/edward-cisneros-QSa-uv4-WJ0k-unsplash.jpg"
   },
   {
     title: "Teens Hangout",
