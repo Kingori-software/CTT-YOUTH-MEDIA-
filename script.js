@@ -7,14 +7,14 @@ CTT YOUTH MEDIA – All functionality
 // ---------- EVENTS DATA ----------
 const events = [
   {
-    title: "Youth Event",
-    date: "COMING SOON",
-    description: "Replace this with your upcoming event details.",
+    title: "Worship Night",
+    date: "21 st AUGUST",
+    description: "YOUTH WORSHIP NIGHT is an event where we come to worship, praise and pray to God.",
     image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80"
   },
   {
-    title: "Youth Gathering",
-    date: "DATE TO BE ADDED",
+    title: "Teens Hangout",
+    date: "FROM 18 th AUGUST",
     description: "Add your event information here.",
     image: "https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=600&q=80"
   }
