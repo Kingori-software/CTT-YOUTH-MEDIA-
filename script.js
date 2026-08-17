@@ -25,8 +25,8 @@ const mediaTeam = [
   { name: "David", role: "Sound" },
   { name: "Steve", role: "Projection" },
   { name: "Ryan", role: "Photography" },
-  { name: "Frank", role: "Stage Management" }
-  { name: "Lewis", role: "Note taking"}
+  { name: "Frank", role: "Stage Management" },
+  { name: "Lewis", role: "Note taking"},
 ];
 
 // ---------- BOT ANSWERS ----------
