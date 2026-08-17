@@ -1,498 +1,159 @@
-u/*
+/*
 ==================================================
-CTT YOUTH MEDIA
-==================================================
-
-NO DATABASE
-NO SUPABASE
-NO BACKEND
-
-Everything below runs directly in the browser.
-
-To update events:
-Edit the "events" section.
-
-To update media team:
-Edit the "mediaTeam" section.
+CTT YOUTH MEDIA – All functionality
 ==================================================
 */
 
-
-/* =========================================
-   UPCOMING EVENTS
-
-   ADD YOUR EVENTS HERE
-========================================= */
-
+// ---------- EVENTS DATA ----------
 const events = [
-
   {
-  title: "Youth Event",
-  date: "COMING SOON",
-  description: "YOUTH WORSHIP NIGHT is an event where we come to praise, worship and Pray to God.",
-  image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&q=80"
-}
-
-
+    title: "Youth Event",
+    date: "COMING SOON",
+    description: "Replace this with your upcoming event details.",
+    image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80"
+  },
   {
-    title: "Teens Hangout",
-
+    title: "Youth Gathering",
     date: "DATE TO BE ADDED",
-
-    description:
-      "Teens hangout is an event where Teens come for a weekly hangout.",
-
-      image: "https://i.ibb.co/8ntTW2Wm/photo-1522158637959-30385a09e0da.jpg"}
-
+    description: "Add your event information here.",
+    image: "https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=600&q=80"
+  }
 ];
 
-
-
-/* =========================================
-   MEDIA TEAM SERVING THIS SUNDAY
-========================================= */
-
+// ---------- MEDIA TEAM DATA ----------
 const mediaTeam = [
-
-  {
-    name: "Media Person 1",
-    role: "Camera"
-  },
-
-  {
-    name: "Media Person 2",
-    role: "Live / Screens"
-  },
-
-  {
-    name: "Media Person 3",
-    role: "Photography"
-  },
-
-  {
-    name: "Media Person 4",
-    role: "Social Media"
-  }
-
+  { name: "Media Person 1", role: "Camera" },
+  { name: "Media Person 2", role: "Live / Screens" },
+  { name: "Media Person 3", role: "Photography" },
+  { name: "Media Person 4", role: "Social Media" }
 ];
 
-
-
-/* =========================================
-   DISPLAY EVENTS
-========================================= */
-
-const eventsGrid =
-  document.getElementById("eventsGrid");
-
-
-function renderEvents() {
-
-  eventsGrid.innerHTML =
-    events.map(event => `
-
-      <article class="event-card">
-
-        <img
-          src="${event.image}"
-          alt="${event.title}"
-          loading="lazy">
-
-        <div class="event-body">
-
-          <div class="event-date">
-            ${event.date}
-          </div>
-
-          <h3>
-            ${event.title}
-          </h3>
-
-          <p>
-            ${event.description}
-          </p>
-
-        </div>
-
-      </article>
-
-    `).join("");
-
-}
-
-
-
-/* =========================================
-   DISPLAY MEDIA TEAM
-========================================= */
-
-const teamGrid =
-  document.getElementById("teamGrid");
-
-
-function initials(name) {
-
-  return name
-    .split(/\s+/)
-    .map(word => word[0])
-    .join("")
-    .slice(0, 2)
-    .toUpperCase();
-
-}
-
-
-function renderTeam() {
-
-  teamGrid.innerHTML =
-    mediaTeam.map(person => `
-
-      <article class="team-card">
-
-        <div class="team-avatar">
-
-          ${initials(person.name)}
-
-        </div>
-
-        <h3>
-          ${person.name}
-        </h3>
-
-        <p>
-          ${person.role}
-        </p>
-
-      </article>
-
-    `).join("");
-
-}
-
-
-
-/* =========================================
-   CTT BOT ANSWERS
-========================================= */
-
+// ---------- BOT ANSWERS ----------
 const answers = [
-
   {
-
-    keys: [
-      "service timing",
-      "service times",
-      "timing",
-      "timings",
-      "time"
-    ],
-
-    answer:
-      "The 1st Service is from 8:30am to 10:30am. The 2nd Service is from 11:30am to 1:30pm."
-
+    keys: ["service timing", "service times", "timing", "timings", "time"],
+    answer: "The 1st Service is from 8:30am to 10:30am. The 2nd Service is from 11:30am to 1:30pm."
   },
-
-
   {
-
-    keys: [
-      "first service",
-      "1st service"
-    ],
-
-    answer:
-      "The first service is the Teens Service, from 8:30am to 10:30am."
-
+    keys: ["first service", "1st service"],
+    answer: "The first service is the Teens Service, from 8:30am to 10:30am."
   },
-
-
   {
-
-    keys: [
-      "second service",
-      "2nd service"
-    ],
-
-    answer:
-      "The second service is the Youth Service, from 11:30am to 1:30pm."
-
+    keys: ["second service", "2nd service"],
+    answer: "The second service is the Youth Service, from 11:30am to 1:30pm."
   },
-
-
   {
-
-    keys: [
-      "upcoming event",
-      "upcoming events",
-      "events"
-    ],
-
-    answer:
-      "Kindly scroll through to the Upcoming Events section and you'll check them there."
-
+    keys: ["upcoming event", "upcoming events", "events"],
+    answer: "Kindly scroll through to the Upcoming Events section and you'll check them there."
   }
-
 ];
 
-
-
-/* =========================================
-   FIND BOT ANSWER
-========================================= */
-
-function botAnswer(question) {
-
-  const q =
-    question
-      .toLowerCase()
-      .trim();
-
-
-  const match =
-    answers.find(item =>
-
-      item.keys.some(key =>
-        q.includes(key)
-      )
-
-    );
-
-
-  if (match) {
-
-    return match.answer;
-
-  }
-
-
-  return `
-    I can help with service timings,
-    the first service, the second service,
-    and upcoming events.
-    Try asking me one of those.
-  `;
-
+// ---------- RENDER EVENTS ----------
+const eventsGrid = document.getElementById('eventsGrid');
+function renderEvents() {
+  eventsGrid.innerHTML = events.map(event => `
+    <article class="event-card">
+      <img src="${event.image}" alt="${event.title}" loading="lazy" />
+      <div class="event-body">
+        <div class="event-date">${event.date}</div>
+        <h3>${event.title}</h3>
+        <p>${event.description}</p>
+      </div>
+    </article>
+  `).join('');
 }
 
+// ---------- RENDER TEAM ----------
+const teamGrid = document.getElementById('teamGrid');
+function initials(name) {
+  return name.split(/\s+/).map(w => w[0]).join('').slice(0, 2).toUpperCase();
+}
+function renderTeam() {
+  teamGrid.innerHTML = mediaTeam.map(person => `
+    <article class="team-card">
+      <div class="team-avatar">${initials(person.name)}</div>
+      <h3>${person.name}</h3>
+      <p>${person.role}</p>
+    </article>
+  `).join('');
+}
 
+// ---------- CHAT BOT ----------
+function botAnswer(question) {
+  const q = question.toLowerCase().trim();
+  const match = answers.find(item => item.keys.some(key => q.includes(key)));
+  if (match) return match.answer;
+  return "I can help with service timings, the first service, the second service, and upcoming events. Try asking me one of those.";
+}
 
-/* =========================================
-   CHAT
-========================================= */
-
-const chatMessages =
-  document.getElementById("chatMessages");
-
-
-const chatForm =
-  document.getElementById("chatForm");
-
-
-const chatInput =
-  document.getElementById("chatInput");
-
-
+const chatMessages = document.getElementById('chatMessages');
+const chatForm = document.getElementById('chatForm');
+const chatInput = document.getElementById('chatInput');
 
 function addMessage(text, type) {
-
-  const div =
-    document.createElement("div");
-
-
-  div.className =
-    `message ${type}`;
-
-
-  div.innerHTML = `
-
-    <b>
-      ${type === "bot" ? "CTT Bot" : "You"}
-    </b>
-
-    <span></span>
-
-  `;
-
-
-  div.querySelector("span")
-    .textContent = text;
-
-
+  const div = document.createElement('div');
+  div.className = `message ${type}`;
+  div.innerHTML = `<b>${type === 'bot' ? 'CTT Bot' : 'You'}</b><span>${text}</span>`;
   chatMessages.appendChild(div);
-
-
-  chatMessages.scrollTop =
-    chatMessages.scrollHeight;
-
+  chatMessages.scrollTop = chatMessages.scrollHeight;
 }
-
-
 
 function ask(question) {
-
-  addMessage(
-    question,
-    "user"
-  );
-
-
-  setTimeout(() => {
-
-    addMessage(
-      botAnswer(question),
-      "bot"
-    );
-
-  }, 250);
-
+  addMessage(question, 'user');
+  setTimeout(() => addMessage(botAnswer(question), 'bot'), 250);
 }
 
+// Chat form submit
+chatForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const q = chatInput.value.trim();
+  if (!q) return;
+  ask(q);
+  chatInput.value = '';
+});
 
+// Quick questions
+document.querySelectorAll('.quick-questions button').forEach(btn => {
+  btn.addEventListener('click', () => ask(btn.dataset.question));
+});
 
-/* =========================================
-   CHAT FORM
-========================================= */
+// ---------- THEME TOGGLE ----------
+const themeToggle = document.getElementById('themeToggle');
+const themeIcon = document.getElementById('themeIcon');
 
-chatForm.addEventListener(
-  "submit",
-  function(event) {
+function getTheme() {
+  return document.documentElement.dataset.theme || 'light';
+}
 
-    event.preventDefault();
-
-
-    const question =
-      chatInput.value.trim();
-
-
-    if (!question) return;
-
-
-    ask(question);
-
-
-    chatInput.value = "";
-
+function setTheme(theme) {
+  if (theme === 'dark') {
+    document.documentElement.dataset.theme = 'dark';
+    localStorage.setItem('ctt-theme', 'dark');
+  } else {
+    delete document.documentElement.dataset.theme;
+    localStorage.setItem('ctt-theme', 'light');
   }
-);
-
-
-
-/* =========================================
-   QUICK QUESTIONS
-========================================= */
-
-document
-  .querySelectorAll(
-    ".quick-questions button"
-  )
-  .forEach(button => {
-
-    button.addEventListener(
-      "click",
-      () => {
-
-        ask(
-          button.dataset.question
-        );
-
-      }
-    );
-
-  });
-
-
-
-/* =========================================
-   DARK / LIGHT THEME
-========================================= */
-
-const themeToggle =
-  document.getElementById(
-    "themeToggle"
-  );
-
-
-const savedTheme =
-  localStorage.getItem(
-    "ctt-theme"
-  );
-
-
-if (savedTheme === "dark") {
-
-  document.documentElement
-    .dataset.theme = "dark";
-
+  updateIcon();
 }
 
-
-
-/* Update theme icon */
-
-function updateThemeIcon() {
-
-  themeToggle.textContent =
-    document.documentElement
-      .dataset.theme === "dark"
-
-      ? "☀️"
-
-      : "🌑";
-
+function updateIcon() {
+  themeIcon.textContent = getTheme() === 'dark' ? '☀️' : '🌑';
 }
 
+// Load saved theme
+const saved = localStorage.getItem('ctt-theme');
+if (saved === 'dark') setTheme('dark');
+else setTheme('light');
 
-updateThemeIcon();
+themeToggle.addEventListener('click', () => {
+  setTheme(getTheme() === 'dark' ? 'light' : 'dark');
+});
 
+// ---------- LAST UPDATED ----------
+document.getElementById('lastUpdated').textContent = new Date().toLocaleDateString('en-GB', {
+  day: 'numeric', month: 'long', year: 'numeric'
+});
 
-
-/* Theme button */
-
-themeToggle.addEventListener(
-  "click",
-  function() {
-
-    const isDark =
-      document.documentElement
-        .dataset.theme === "dark";
-
-
-    if (isDark) {
-
-      delete document.documentElement
-        .dataset.theme;
-
-      localStorage.setItem(
-        "ctt-theme",
-        "light"
-      );
-
-    }
-
-    else {
-
-      document.documentElement
-        .dataset.theme = "dark";
-
-      localStorage.setItem(
-        "ctt-theme",
-        "dark"
-      );
-
-    }
-
-
-    updateThemeIcon();
-
-  }
-);
-
-
-
-/* =========================================
-   START WEBSITE
-========================================= */
-
+// ---------- INIT ----------
 renderEvents();
-
 renderTeam();
