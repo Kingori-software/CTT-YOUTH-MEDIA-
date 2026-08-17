@@ -26,7 +26,7 @@ const mediaTeam = [
   { Steve: "Media Person 2", role: "Projection" },
   { Ryan: "Media Person 3", role: "Photography" },
   { Frank: "Media Person 4", role: "Stage Management" }
-{ Lewis: "Media Person 4", role: "Note Taking " }
+{ Lewis: "Media Person 4", role: "Note Taking " },
 ];
 
 // ---------- BOT ANSWERS ----------
