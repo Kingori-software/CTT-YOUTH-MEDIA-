@@ -10,13 +10,13 @@ const events = [
     title: "Youth Event",
     date: "COMING SOON",
     description: "Replace this with your upcoming event details.",
-    image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80"
+    image: "https://i.ibb.co/nswf3VYJ/edward-cisneros-QSa-uv4-WJ0k-unsplash.jpg"
   },
   {
     title: "Youth Gathering",
     date: "DATE TO BE ADDED",
     description: "Add your event information here.",
-    image: "https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=600&q=80"
+    image: "‎src="https://i.ibb.co/WWYM3vx0/istockphoto-2229387307-612x612.jpg"
   }
 ];
 
