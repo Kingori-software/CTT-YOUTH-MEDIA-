@@ -7,26 +7,35 @@ CTT YOUTH MEDIA – All functionality
 // ---------- EVENTS DATA ----------
 const events = [
   {
-    title: "Worship Night",
-    date: "21 st AUGUST",
-    description: "YOUTH WORSHIP NIGHT is an event where we come to worship, praise and pray to God.",
-    image: "https://i.ibb.co/nswf3VYJ/edward-cisneros-QSa-uv4-WJ0k-unsplash.jpg"
+    title: "Youth Event",
+    date: "COMING SOON",
+    description: "Replace this with your upcoming event details.",
+    image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80"
   },
   {
-    title: "Teens Hangout",
-    date: "FROM 18 th AUGUST",
-    description: "A fun and engaging space where teens connect, make friends, share experiences, and enjoy great vibes together! 🎉🤝.",
-    image: "https://i.ibb.co/WWYM3vx0/istockphoto-2229387307-612x612.jpg"
+    title: "Youth Gathering",
+    date: "DATE TO BE ADDED",
+    description: "Add your event information here.",
+    image: "https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=600&q=80"
   }
 ];
 
-// ---------- MEDIA TEAM DATA ----------
-const mediaTeam = [
+// ---------- MEDIA TEAM DATA (Two separate arrays) ----------
+const firstTeam = [
   { name: "David", role: "Sound" },
   { name: "Steve", role: "Projection" },
   { name: "Ryan", role: "Photography" },
   { name: "Frank", role: "Stage Management" },
-  { name: "Lewis", role: "Note taking"},
+  { name: "Lewis", role: "Note taking" }
+];
+
+const secondTeam = [
+  // 👇 ADD YOUR SECOND SERVICE PEOPLE HERE
+  { name: "Grace", role: "Camera" },
+  { name: "Josh", role: "Live Stream" },
+  { name: "Emma", role: "Social Media" },
+  { name: "Michael", role: "Sound" },
+  { name: "Sarah", role: "Projection" }
 ];
 
 // ---------- BOT ANSWERS ----------
@@ -64,19 +73,27 @@ function renderEvents() {
   `).join('');
 }
 
-// ---------- RENDER TEAM ----------
-const teamGrid = document.getElementById('teamGrid');
+// ---------- RENDER TEAM (two grids) ----------
 function initials(name) {
   return name.split(/\s+/).map(w => w[0]).join('').slice(0, 2).toUpperCase();
 }
+
 function renderTeam() {
-  teamGrid.innerHTML = mediaTeam.map(person => `
-    <article class="team-card">
-      <div class="team-avatar">${initials(person.name)}</div>
-      <h3>${person.name}</h3>
-      <p>${person.role}</p>
-    </article>
-  `).join('');
+  const gridFirst = document.getElementById('teamGridFirst');
+  const gridSecond = document.getElementById('teamGridSecond');
+
+  function renderGrid(grid, team) {
+    grid.innerHTML = team.map(person => `
+      <article class="team-card">
+        <div class="team-avatar">${initials(person.name)}</div>
+        <h3>${person.name}</h3>
+        <p>${person.role}</p>
+      </article>
+    `).join('');
+  }
+
+  renderGrid(gridFirst, firstTeam);
+  renderGrid(gridSecond, secondTeam);
 }
 
 // ---------- CHAT BOT ----------
