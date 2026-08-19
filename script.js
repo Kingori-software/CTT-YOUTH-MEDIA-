@@ -25,17 +25,17 @@ const firstTeam = [
   { name: "David", role: "Sound" },
   { name: "Steve", role: "Projection" },
   { name: "Ryan", role: "Photography" },
-  { name: "Frank", role: "Stage Management" },
+  { name: "Frank", role: "Cable and Stage Management" },
   { name: "Lewis", role: "Note taking" }
 ];
 
 const secondTeam = [
   // 👇 ADD YOUR SECOND SERVICE PEOPLE HERE
-  { name: "Grace", role: "Camera" },
-  { name: "Josh", role: "Live Stream" },
-  { name: "Emma", role: "Social Media" },
-  { name: "Michael", role: "Sound" },
-  { name: "Sarah", role: "Projection" }
+  { name: "Lewis", role: "Sound" },
+  { name: "Chris", role: "Projections" },
+  { name: "Florence", role: "Socials" },
+  { name: "Florence", role: "Photo editing" },
+  { name: "Frank", role: "Cable and Stage management" }
 ];
 
 // ---------- BOT ANSWERS ----------
