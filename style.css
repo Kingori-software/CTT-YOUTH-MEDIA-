@@ -474,3 +474,26 @@ footer p { color: var(--muted); margin: 4px 0; }
   footer { flex-direction: column; text-align: center; }
   .chat-shell { padding: 16px; }
 }
+/* =========================================
+   DARK MODE – CHAT TEXT IN BRIGHT RED
+========================================= */
+
+[data-theme="dark"] .message.bot span {
+  color: #ff3333;  /* bright red */
+}
+
+[data-theme="dark"] .message.user span {
+  color: #ffffff;  /* keep user messages white for contrast */
+}
+
+[data-theme="dark"] .quick-questions button {
+  color: #ff3333 !important;  /* force red text on quick buttons */
+}
+
+[data-theme="dark"] .chat-input input {
+  color: #ff3333 !important;  /* text you type – red */
+}
+
+[data-theme="dark"] .chat-input input::placeholder {
+  color: #ff6666;  /* placeholder text – softer red */
+}
