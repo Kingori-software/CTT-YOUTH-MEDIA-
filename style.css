@@ -400,6 +400,11 @@ code { color: var(--red); }
   background: var(--bg);
   color: var(--text);
 }
+[data-theme="dark"] .chat-input input {
+  background: #1a0a0a;
+  border-color: #c32929;
+  color: #fff;
+}
 .chat-input input:focus {
   outline: 2px solid var(--red);
   outline-offset: 2px;
