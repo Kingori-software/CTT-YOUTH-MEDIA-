@@ -7,16 +7,16 @@ CTT YOUTH MEDIA – All functionality
 // ---------- EVENTS DATA ----------
 const events = [
   {
-    title: "Youth Event",
-    date: "COMING SOON",
-    description: "Replace this with your upcoming event details.",
+    title: "Youth Worship Night",
+    date: "21 August 2026",
+    description: "An inspiring night of worship, prayer, and heartfelt connection with God. 🙏🏽✨.",
     image: "https://i.ibb.co/nswf3VYJ/edward-cisneros-QSa-uv4-WJ0k-unsplash.jpg"
   },
   {
-    title: "Youth Gathering",
-    date: "DATE TO BE ADDED",
-    description: "Add your event information here.",
-    image: "‎src="https://i.ibb.co/WWYM3vx0/istockphoto-2229387307-612x612.jpg"
+    title: "Teens hangout",
+    date: "18 TH TO 21 AUGUST",
+    description: "A fun and engaging space where teens connect, make friends, share experiences, and enjoy great vibes together! 🎉🤝.",
+    image: "https://i.ibb.co/WWYM3vx0/istockphoto-2229387307-612x612.jpg"
   }
 ];
 
