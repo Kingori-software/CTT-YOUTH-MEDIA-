@@ -14,7 +14,7 @@ const events = [
   },
   {
     title: "Teens hangout",
-    date: "18 TH TO 21 AUGUST",
+    date: "This Saturday 22 AUGUST",
     description: "A fun and engaging space where teens connect, make friends, share experiences, and enjoy great vibes together! 🎉🤝.",
     image: "https://i.ibb.co/WWYM3vx0/istockphoto-2229387307-612x612.jpg"
   }
