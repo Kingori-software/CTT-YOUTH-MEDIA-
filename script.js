@@ -7,35 +7,35 @@ CTT YOUTH MEDIA – All functionality
 // ---------- EVENTS DATA ----------
 const events = [
   {
-    title: "Youth Worship Night",
-    date: "21 August 2026",
-    description: "An inspiring night of worship, prayer, and heartfelt connection with God. 🙏🏽✨.",
+    title: "ERROR",
+    date: "ERROR",
+    description: "WAIT FOR ADMIN TO UPDATE.",
     image: "https://i.ibb.co/nswf3VYJ/edward-cisneros-QSa-uv4-WJ0k-unsplash.jpg"
   },
   {
-    title: "Teens hangout",
-    date: "This Saturday 22 AUGUST",
-    description: "A fun and engaging space where teens connect, make friends, share experiences, and enjoy great vibes together! 🎉🤝.",
+    title: "ERROR",
+    date: "?",
+    description: "YET TO BE UPDATED BY THE ADMIN.",
     image: "https://i.ibb.co/WWYM3vx0/istockphoto-2229387307-612x612.jpg"
   }
 ];
 
 // ---------- MEDIA TEAM DATA (Two separate arrays) ----------
 const firstTeam = [
-  { name: "David", role: "Sound" },
-  { name: "Steve", role: "Projection" },
-  { name: "Ryan", role: "Photography" },
-  { name: "Frank", role: "Cable and Stage Management" },
-  { name: "Lewis", role: "Note taking" }
+  { name: "ERROR", role: "Sound" },
+  { name: "ERROR", role: "Projection" },
+  { name: "ERROR", role: "Photography" },
+  { name: "ERROR", role: "Cable and Stage Management" },
+  { name: "ERROR", role: "Note taking" }
 ];
 
 const secondTeam = [
   // 👇 ADD YOUR SECOND SERVICE PEOPLE HERE
-  { name: "Lewis", role: "Sound" },
-  { name: "Chris", role: "Projections" },
-  { name: "Florence", role: "Socials" },
-  { name: "Florence", role: "Photo editing" },
-  { name: "Frank", role: "Cable and Stage management" }
+  { name: "ERROR", role: "Sound" },
+  { name: "ERROR", role: "Projections" },
+  { name: "ERROR", role: "Socials" },
+  { name: "ERROR", role: "Photo editing" },
+  { name: "ERROR", role: "Cable and Stage management" }
 ];
 
 // ---------- BOT ANSWERS ----------
