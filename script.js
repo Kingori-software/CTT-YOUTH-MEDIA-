@@ -11,7 +11,7 @@ const events = [
     date: "30 TH AUGUST",
     description: "In appreciation of your service, dedication and impact. Wishing you success in your next chapter.",
     image: "https://i.ibb.co/9k26m2Hd/IMG-20260829-WA7386.jpg",
-    url: "https://robertwenani.com"  // 👈 PUT THE LINK HERE
+    url: "https://robert-ctt-youth-farewell-2026.vercel.app/"  // 👈 PUT THE LINK HERE
   },
   {
   title: "AFLEWO",
