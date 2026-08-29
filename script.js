@@ -7,16 +7,18 @@ CTT YOUTH MEDIA – All functionality
 // ---------- EVENTS DATA ----------
 const events = [
   {
-    title: "ERROR",
-    date: "ERROR",
-    description: "WAIT FOR ADMIN TO UPDATE.",
-    image: "https://i.ibb.co/nswf3VYJ/edward-cisneros-QSa-uv4-WJ0k-unsplash.jpg"
+    title: "ROBERT WENANI FAREWELL",
+    date: "30 TH AUGUST",
+    description: "In appreciation of your service, dedication and impact.
+‎> Wishing you success in your next chapter..",
+    image: 
+‎"https://i.ibb.co/9k26m2Hd/IMG-20260829-WA7386.jpg"
   },
   {
-    title: "ERROR",
-    date: "?",
-    description: "YET TO BE UPDATED BY THE ADMIN.",
-    image: "https://i.ibb.co/WWYM3vx0/istockphoto-2229387307-612x612.jpg"
+    title: "AFLEWO",
+    date: "30 TH AUGUST",
+    description: "COME LETS PRAISE AND WORSHIP TOGETHER IN THE LORDS HOUSE.",
+    image: ‎"https://i.ibb.co/NgtqhB0C/6a92232be10a340a9d625b78-1787962222979-1.jpg"
   }
 ];
 
