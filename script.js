@@ -10,7 +10,7 @@ const events = [
     title: "ROBERT WENANI FAREWELL",
     date: "30 TH AUGUST",
     description: "In appreciation of your service, dedication and impact.
-‎> Wishing you success in your next chapter..",
+‎Wishing you success in your next chapter..",
     image: 
 ‎"https://i.ibb.co/9k26m2Hd/IMG-20260829-WA7386.jpg"
   },
