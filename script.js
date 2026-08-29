@@ -10,31 +10,33 @@ const events = [
     title: "ROBERT WENANI FAREWELL",
     date: "30 TH AUGUST",
     description: "In appreciation of your service, dedication and impact. Wishing you success in your next chapter.",
-    image: "https://i.ibb.co/9k26m2Hd/IMG-20260829-WA7386.jpg"
+    image: "https://i.ibb.co/9k26m2Hd/IMG-20260829-WA7386.jpg",
+    url: "https://robertwenani.com"  // 👈 PUT THE LINK HERE
   },
   {
     title: "AFLEWO",
     date: "30 TH AUGUST",
     description: "COME LETS PRAISE AND WORSHIP TOGETHER IN THE LORDS HOUSE.",
-    image: "https://i.ibb.co/hFY7TMJR/IMG-20260826-WA0103.jpg"
+    image: "https://i.ibb.co/NgtqhB0C/6a92232be10a340a9d625b78-1787962222979-1.jpg"
+    // no url – title will be plain text
   }
 ];
 
 // ---------- MEDIA TEAM DATA (Two separate arrays) ----------
 const firstTeam = [
-  { name: "ERROR", role: "Sound" },
-  { name: "ERROR", role: "Projection" },
-  { name: "ERROR", role: "Photography" },
-  { name: "ERROR", role: "Cable and Stage Management" },
-  { name: "ERROR", role: "Note taking" }
+  { name: "David", role: "Sound" },
+  { name: "Steve", role: "Projection" },
+  { name: "Ryan", role: "Photography" },
+  { name: "Frank", role: "Cable and Stage Management" },
+  { name: "Lewis", role: "Note taking" }
 ];
 
 const secondTeam = [
-  { name: "ERROR", role: "Sound" },
-  { name: "ERROR", role: "Projections" },
-  { name: "ERROR", role: "Socials" },
-  { name: "ERROR", role: "Photo editing" },
-  { name: "ERROR", role: "Cable and Stage management" }
+  { name: "Grace", role: "Sound" },
+  { name: "Josh", role: "Projections" },
+  { name: "Emma", role: "Socials" },
+  { name: "Michael", role: "Photo editing" },
+  { name: "Sarah", role: "Cable and Stage management" }
 ];
 
 // ---------- BOT ANSWERS ----------
@@ -57,19 +59,30 @@ const answers = [
   }
 ];
 
-// ---------- RENDER EVENTS ----------
+// ---------- RENDER EVENTS (with clickable images and titles) ----------
 const eventsGrid = document.getElementById('eventsGrid');
 function renderEvents() {
-  eventsGrid.innerHTML = events.map(event => `
-    <article class="event-card">
-      <img src="${event.image}" alt="${event.title}" loading="lazy" />
-      <div class="event-body">
-        <div class="event-date">${event.date}</div>
-        <h3>${event.title}</h3>
-        <p>${event.description}</p>
-      </div>
-    </article>
-  `).join('');
+  eventsGrid.innerHTML = events.map(event => {
+    // Image click: opens the image in a new tab
+    const imageLink = event.image; // or you could use a separate field: event.imageLink
+    const titleLink = event.url || null; // if url exists, title becomes a link
+
+    return `
+      <article class="event-card">
+        <a href="${imageLink}" target="_blank" rel="noopener noreferrer">
+          <img src="${event.image}" alt="${event.title}" loading="lazy" />
+        </a>
+        <div class="event-body">
+          <div class="event-date">${event.date}</div>
+          ${titleLink 
+            ? `<h3><a href="${titleLink}" target="_blank" rel="noopener noreferrer" style="color: var(--red); text-decoration: underline; transition: color 0.2s;" onmouseover="this.style.color='var(--red-dark)'" onmouseout="this.style.color='var(--red)'">${event.title}</a></h3>`
+            : `<h3>${event.title}</h3>`
+          }
+          <p>${event.description}</p>
+        </div>
+      </article>
+    `;
+  }).join('');
 }
 
 // ---------- RENDER TEAM (two grids) ----------
