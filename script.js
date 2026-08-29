@@ -19,8 +19,6 @@ const events = [
     image: "https://i.ibb.co/NgtqhB0C/6a92232be10a340a9d625b78-1787962222979-1.jpg"
   }
 ];
-
-  }
 ];
 
 // ---------- MEDIA TEAM DATA (Two separate arrays) ----------
