@@ -19,24 +19,22 @@ const events = [
     image: "https://i.ibb.co/NgtqhB0C/6a92232be10a340a9d625b78-1787962222979-1.jpg"
   }
 ];
-];
 
 // ---------- MEDIA TEAM DATA (Two separate arrays) ----------
 const firstTeam = [
-  { name: "ERROR", role: "Sound" },
-  { name: "ERROR", role: "Projection" },
-  { name: "ERROR", role: "Photography" },
-  { name: "ERROR", role: "Cable and Stage Management" },
-  { name: "ERROR", role: "Note taking" }
+  { name: "David", role: "Sound" },
+  { name: "Steve", role: "Projection" },
+  { name: "Ryan", role: "Photography" },
+  { name: "Frank", role: "Cable and Stage Management" },
+  { name: "Lewis", role: "Note taking" }
 ];
 
 const secondTeam = [
-  // 👇 ADD YOUR SECOND SERVICE PEOPLE HERE
-  { name: "ERROR", role: "Sound" },
-  { name: "ERROR", role: "Projections" },
-  { name: "ERROR", role: "Socials" },
-  { name: "ERROR", role: "Photo editing" },
-  { name: "ERROR", role: "Cable and Stage management" }
+  { name: "Grace", role: "Sound" },
+  { name: "Josh", role: "Projections" },
+  { name: "Emma", role: "Socials" },
+  { name: "Michael", role: "Photo editing" },
+  { name: "Sarah", role: "Cable and Stage management" }
 ];
 
 // ---------- BOT ANSWERS ----------
