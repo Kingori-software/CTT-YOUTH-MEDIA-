@@ -17,7 +17,7 @@ const events = [
     title: "AFLEWO",
     date: "30 TH AUGUST",
     description: "COME LETS PRAISE AND WORSHIP TOGETHER IN THE LORDS HOUSE.",
-   image:"‎https://i.ibb.co/hFY7TMJR/IMG-20260826-WA0103.jpg"
+image:"‎https://i.ibb.co/hFY7TMJR/IMG-20260826-WA0103.jpg"
   }
 ];
 
