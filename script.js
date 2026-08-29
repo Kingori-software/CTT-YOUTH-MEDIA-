@@ -23,19 +23,19 @@ const events = [
 
 // ---------- MEDIA TEAM DATA (Two separate arrays) ----------
 const firstTeam = [
-  { name: "David", role: "Sound" },
-  { name: "Steve", role: "Projection" },
-  { name: "Ryan", role: "Photography" },
-  { name: "Frank", role: "Cable and Stage Management" },
-  { name: "Lewis", role: "Note taking" }
+  { name: "N/A", role: "Sound" },
+  { name: "N/A", role: "Projection" },
+  { name: "N/A", role: "Photography" },
+  { name: "N/A", role: "Cable and Stage Management" },
+  { name: "N/A", role: "Note taking" }
 ];
 
 const secondTeam = [
-  { name: "Grace", role: "Sound" },
-  { name: "Josh", role: "Projections" },
-  { name: "Emma", role: "Socials" },
-  { name: "Michael", role: "Photo editing" },
-  { name: "Sarah", role: "Cable and Stage management" }
+  { name: "N/A", role: "Sound" },
+  { name: "N/A", role: "Projections" },
+  { name: "N/A", role: "Socials" },
+  { name: "N/A", role: "Photo editing" },
+  { name: "N/A", role: "Cable and Stage management" }
 ];
 
 // ---------- BOT ANSWERS ----------
