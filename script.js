@@ -16,25 +16,25 @@ const events = [
     title: "AFLEWO",
     date: "30 TH AUGUST",
     description: "COME LETS PRAISE AND WORSHIP TOGETHER IN THE LORDS HOUSE.",
-    image: "https://i.ibb.co/NgtqhB0C/6a92232be10a340a9d625b78-1787962222979-1.jpg"
+    image: "https://i.ibb.co/hFY7TMJR/IMG-20260826-WA0103.jpg"
   }
 ];
 
 // ---------- MEDIA TEAM DATA (Two separate arrays) ----------
 const firstTeam = [
-  { name: "David", role: "Sound" },
-  { name: "Steve", role: "Projection" },
-  { name: "Ryan", role: "Photography" },
-  { name: "Frank", role: "Cable and Stage Management" },
-  { name: "Lewis", role: "Note taking" }
+  { name: "ERROR", role: "Sound" },
+  { name: "ERROR", role: "Projection" },
+  { name: "ERROR", role: "Photography" },
+  { name: "ERROR", role: "Cable and Stage Management" },
+  { name: "ERROR", role: "Note taking" }
 ];
 
 const secondTeam = [
-  { name: "Grace", role: "Sound" },
-  { name: "Josh", role: "Projections" },
-  { name: "Emma", role: "Socials" },
-  { name: "Michael", role: "Photo editing" },
-  { name: "Sarah", role: "Cable and Stage management" }
+  { name: "ERROR", role: "Sound" },
+  { name: "ERROR", role: "Projections" },
+  { name: "ERROR", role: "Socials" },
+  { name: "ERROR", role: "Photo editing" },
+  { name: "ERROR", role: "Cable and Stage management" }
 ];
 
 // ---------- BOT ANSWERS ----------
