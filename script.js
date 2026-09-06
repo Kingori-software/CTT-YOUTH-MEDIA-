@@ -16,7 +16,7 @@ image: "https://i.ibb.co/d0SQskDQ/IMG-20260906-WA7380.jpg"
   title: "Sunday",
   date: "September",
   description: "Church.",
-  image: "https:<a href="https://i.ibb.co/dJrgqtkN/FSai5-UPXIAE0g-Y6.jpg"
+  image:"https://i.ibb.co/dJrgqtkN/FSai5-UPXIAE0g-Y6.jpg"
 }
 ];
 
