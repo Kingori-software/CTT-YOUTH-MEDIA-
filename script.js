@@ -8,13 +8,13 @@ CTT YOUTH MEDIA – All functionality
 const events = [
   {
     title: "Missions Month",
-    date: "September ",
-    description: "Missions.",
-    image: "https://i.ibb.co/9k26m2Hd/IMG-20260829-WA7386.jpg",
-    url: "https://robert-ctt-youth-farewell-2026.vercel.app/"  // 👈 PUT THE LINK HERE
-  },
+date: "September ",
+description: "Missions.",
+image: "https://i.ibb.co/9k26m2Hd/IMG-20260829-WA7386.jpg"
+},
+{
   {
-  title: "FLEWO",
+  title: "Flew",
   date: "30 TH AUGUST",
   description: "COME LETS PRAISE AND WORSHIP TOGETHER IN THE LORDS HOUSE.",
   image: "https://i.ibb.co/hFY7TMJR/IMG-20260826-WA0103.jpg"
