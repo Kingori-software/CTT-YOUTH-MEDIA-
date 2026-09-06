@@ -10,12 +10,12 @@ const events = [
     title: "Missions Month",
 date: "September ",
 description: "Missions.",
-image: "https://i.ibb.co/9k26m2Hd/IMG-20260829-WA7386.jpg"
+image: "https://i.ibb.co/d0SQskDQ/IMG-20260906-WA7380.jpg"
 },
 {
-  title: "Flew",
-  date: "30 TH AUGUST",
-  description: "COME LETS PRAISE AND WORSHIP TOGETHER IN THE LORDS HOUSE.",
+  title: "Sunday",
+  date: "September",
+  description: "Church.",
   image: "https://i.ibb.co/hFY7TMJR/IMG-20260826-WA0103.jpg"
 }
 ];
