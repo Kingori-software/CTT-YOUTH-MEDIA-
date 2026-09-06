@@ -13,7 +13,6 @@ description: "Missions.",
 image: "https://i.ibb.co/9k26m2Hd/IMG-20260829-WA7386.jpg"
 },
 {
-  {
   title: "Flew",
   date: "30 TH AUGUST",
   description: "COME LETS PRAISE AND WORSHIP TOGETHER IN THE LORDS HOUSE.",
