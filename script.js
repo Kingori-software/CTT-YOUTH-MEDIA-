@@ -7,14 +7,14 @@ CTT YOUTH MEDIA – All functionality
 // ---------- EVENTS DATA ----------
 const events = [
   {
-    title: "ROBERT WENANI FAREWELL",
-    date: "30 TH AUGUST",
-    description: "In appreciation of your service, dedication and impact. Wishing you success in your next chapter.",
+    title: "Missions Month",
+    date: "September ",
+    description: "Missions.",
     image: "https://i.ibb.co/9k26m2Hd/IMG-20260829-WA7386.jpg",
     url: "https://robert-ctt-youth-farewell-2026.vercel.app/"  // 👈 PUT THE LINK HERE
   },
   {
-  title: "AFLEWO",
+  title: "FLEWO",
   date: "30 TH AUGUST",
   description: "COME LETS PRAISE AND WORSHIP TOGETHER IN THE LORDS HOUSE.",
   image: "https://i.ibb.co/hFY7TMJR/IMG-20260826-WA0103.jpg"
@@ -23,19 +23,19 @@ const events = [
 
 // ---------- MEDIA TEAM DATA (Two separate arrays) ----------
 const firstTeam = [
-  { name: "N/A", role: "Sound" },
-  { name: "N/A", role: "Projection" },
-  { name: "N/A", role: "Photography" },
-  { name: "N/A", role: "Cable and Stage Management" },
-  { name: "N/A", role: "Note taking" }
+  { name: "Family Sunday", role: "Sound" },
+  { name: "Family Sunday", role: "Projection" },
+  { name: "Family Sunday", role: "Photography" },
+  { name: "Family Sunday", role: "Cable and Stage Management" },
+  { name: "Family Sunday", role: "Note taking" }
 ];
 
 const secondTeam = [
-  { name: "N/A", role: "Sound" },
-  { name: "N/A", role: "Projections" },
-  { name: "N/A", role: "Socials" },
-  { name: "N/A", role: "Photo editing" },
-  { name: "N/A", role: "Cable and Stage management" }
+  { name: "Family Sundat", role: "Sound" },
+  { name: "Family Sunday", role: "Projections" },
+  { name: "Family Sunday", role: "Socials" },
+  { name: "Family Sunday", role: "Photo editing" },
+  { name: "Family Sunday", role: "Cable and Stage management" }
 ];
 
 // ---------- BOT ANSWERS ----------
