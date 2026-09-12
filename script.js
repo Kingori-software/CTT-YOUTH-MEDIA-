@@ -22,19 +22,19 @@ image: "https://i.ibb.co/d0SQskDQ/IMG-20260906-WA7380.jpg"
 
 // ---------- MEDIA TEAM DATA (Two separate arrays) ----------
 const firstTeam = [
-  { name: "Family Sunday", role: "Sound" },
-  { name: "Family Sunday", role: "Projection" },
-  { name: "Family Sunday", role: "Photography" },
-  { name: "Family Sunday", role: "Cable and Stage Management" },
-  { name: "Family Sunday", role: "Note taking" }
+  { name: "Frank", role: "Sound" },
+  { name: "David", role: "Projection" },
+  { name: "Florence", role: "Photography" },
+  { name: "Mark", role: "Cable and Stage Management" },
+  { name: "Loftus", role: "Note taking" }
 ];
 
 const secondTeam = [
-  { name: "Family Sundat", role: "Sound" },
-  { name: "Family Sunday", role: "Projections" },
-  { name: "Family Sunday", role: "Socials" },
-  { name: "Family Sunday", role: "Photo editing" },
-  { name: "Family Sunday", role: "Cable and Stage management" }
+  { name: "Frank", role: "Sound" },
+  { name: "David", role: "Projections" },
+  { name: "Florence", role: "Socials" },
+  { name: "Florence", role: "Photography" },
+  { name: "Mark", role: "Cable and Stage management" }
 ];
 
 // ---------- BOT ANSWERS ----------
