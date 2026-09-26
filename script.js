@@ -26,7 +26,7 @@ const firstTeam = [
   { name: "Lewis", role: "Projection" },
   { name: "Ryan", role: "Photography" },
   { name: "David", role: "Cable and Stage Management" },
-  { name: "Blank", role: "Note taking" }
+  { name: "Loftus", role: "Note taking" }
 ];
 
 const secondTeam = [
