@@ -22,17 +22,17 @@ image: "https://i.ibb.co/d0SQskDQ/IMG-20260906-WA7380.jpg"
 
 // ---------- MEDIA TEAM DATA (Two separate arrays) ----------
 const firstTeam = [
-  { name: "Praise", role: "Sound" },
-  { name: "Lewis", role: "Projection" },
+  { name: "Lewis", role: "Sound" },
+  { name: "Faith", role: "Projection" },
   { name: "Ryan", role: "Photography" },
-  { name: "David", role: "Cable and Stage Management" },
-  { name: "Loftus", role: "Note taking" }
+  { name: "...", role: "Cable and Stage Management" },
+  { name: "Note taking", role: "Note taking" }
 ];
 
 const secondTeam = [
-  { name: "Loftus", role: "Sound" },
-  { name: "Lewis", role: "Projections" },
-  { name: "Kindly Volunteer", role: "Socials" },
+  { name: "Lewis", role: "Sound" },
+  { name: "Faith", role: "Projections" },
+  { name: "...", role: "Socials" },
   { name: "Ryan", role: "Photography" },
   { name: "David", role: "Cable and Stage management" }
 ];
