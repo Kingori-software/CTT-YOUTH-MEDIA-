@@ -6,12 +6,7 @@ CTT YOUTH MEDIA – All functionality
 
 // ---------- EVENTS DATA ----------
 const events = [
-  {
-    title: "###",
-date: "###",
-description: "###.",
-image: "https://i.ibb.co/d0SQskDQ/IMG-20260906-WA7380.jpg"
-},
+  
 {
   title: "Sunday",
   date: "8 th November",
