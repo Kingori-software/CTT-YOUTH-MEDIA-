@@ -7,14 +7,14 @@ CTT YOUTH MEDIA – All functionality
 // ---------- EVENTS DATA ----------
 const events = [
   {
-    title: "Missions Month",
-date: "September ",
-description: "Missions.",
+    title: "###",
+date: "###",
+description: "###.",
 image: "https://i.ibb.co/d0SQskDQ/IMG-20260906-WA7380.jpg"
 },
 {
   title: "Sunday",
-  date: "September",
+  date: "8 th November",
   description: "Church.",
   image:"https://i.ibb.co/dJrgqtkN/FSai5-UPXIAE0g-Y6.jpg"
 }
@@ -23,18 +23,18 @@ image: "https://i.ibb.co/d0SQskDQ/IMG-20260906-WA7380.jpg"
 // ---------- MEDIA TEAM DATA (Two separate arrays) ----------
 const firstTeam = [
   { name: "Lewis", role: "Sound" },
-  { name: "Faith", role: "Projection" },
+  { name: "Mark Mutugi", role: "Projection" },
   { name: "Ryan", role: "Photography" },
-  { name: "...", role: "Cable and Stage Management" },
+  { name: "Frank", role: "Cable and Stage Management" },
   { name: "Note taking", role: "Note taking" }
 ];
 
 const secondTeam = [
   { name: "Lewis", role: "Sound" },
-  { name: "Faith", role: "Projections" },
+  { name: "Mark Mutugi", role: "Projections" },
   { name: "...", role: "Socials" },
-  { name: "Ryan", role: "Photography" },
-  { name: "David", role: "Cable and Stage management" }
+  { name: "...", role: "Photography" },
+  { name: "Frank", role: "Cable and Stage management" }
 ];
 
 // ---------- BOT ANSWERS ----------
