@@ -26,7 +26,7 @@ Under the theme Arise & Shine (Isaiah 60:1), we’re gathering youth and teens f
   }
 ];
 
-// ---------- MEDIA TEAM DATA ----------
+// ---------- MEDIA TEAM DATA ---------
 const firstTeam = [
   { name: "", role: "" },
   { name: "Mark Mutugi", role: "Livestream" },
