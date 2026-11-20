@@ -22,7 +22,7 @@ Under the theme Arise & Shine (Isaiah 60:1), we’re gathering youth and teens f
   date: "21st November",
   description: "Ready to get messy? Join us for Color Fest Fun Day—a high-energy celebration of music, games, and epic bursts of color! Wear white, bring your crew, and get ready to dance, laugh, and glow from head to toe. Don't just watch the fun—become part of the canvas! 🌈🎉",
   image:"https://xsvudifkvccfyycgcjcv.supabase.co/storage/v1/object/public/product-images/CTT/UPCOMING%20EVENTS/IMG-20261118-WA0216.jpg"
-},
+}
 
 ];
 
