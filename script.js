@@ -15,7 +15,7 @@ Under the theme Arise & Shine (Isaiah 60:1), we’re gathering youth and teens f
 📅 Dates: 25th – 27th Nov, 2026
 ⏰ Time: 8:00 AM – 5:00 PM",
   image:"https://xsvudifkvccfyycgcjcv.supabase.co/storage/v1/object/public/product-images/CTT/UPCOMING%20EVENTS/IMG-20261120-WA0438.jpg"
-}
+},
 
 {
   title: "Color Fest Fun day",
