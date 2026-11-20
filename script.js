@@ -21,7 +21,7 @@ const firstTeam = [
   { name: "Mark Mutugi", role: "Livestream" },
   { name: "Victor Praise", role: "Photography" },
   { name: "Leonard Kirinya", role: "Photography" },
-  { name: "", role: "" }
+  { name: "Calvin", role: "Photography" }
 ];
 
 const secondTeam = [
