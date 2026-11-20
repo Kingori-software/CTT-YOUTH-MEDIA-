@@ -10,7 +10,7 @@ const events = [
 {
   title: "Sunday",
   date: "25-27th November",
-  description: "Church.",
+  description: "YT 2026 FESTIVAL.",
   image:"https://xsvudifkvccfyycgcjcv.supabase.co/storage/v1/object/public/product-images/CTT/UPCOMING%20EVENTS/IMG-20261120-WA0438.jpg"
 }
 ];
