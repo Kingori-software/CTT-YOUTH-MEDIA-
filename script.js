@@ -9,9 +9,9 @@ const events = [
   
 {
   title: "Sunday",
-  date: "22 th November",
+  date: "25-27th November",
   description: "Church.",
-  image:"https://i.ibb.co/dJrgqtkN/FSai5-UPXIAE0g-Y6.jpg"
+  image:"https://xsvudifkvccfyycgcjcv.supabase.co/storage/v1/object/public/product-images/CTT/UPCOMING%20EVENTS/IMG-20261120-WA0438.jpg"
 }
 ];
 
