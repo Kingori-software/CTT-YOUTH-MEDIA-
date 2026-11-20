@@ -9,7 +9,7 @@ const events = [
   
 {
   title: "Sunday",
-  date: "8 th November",
+  date: "22 th November",
   description: "Church.",
   image:"https://i.ibb.co/dJrgqtkN/FSai5-UPXIAE0g-Y6.jpg"
 }
@@ -17,19 +17,19 @@ const events = [
 
 // ---------- MEDIA TEAM DATA (Two separate arrays) ----------
 const firstTeam = [
-  { name: "Lewis", role: "Sound" },
-  { name: "Mark Mutugi", role: "Projection" },
-  { name: "Ryan", role: "Photography" },
-  { name: "Frank", role: "Cable and Stage Management" },
-  { name: "Note taking", role: "Note taking" }
+  { name: "", role: "" },
+  { name: "Mark Mutugi", role: "Livestream" },
+  { name: "Victor Praise", role: "Photography" },
+  { name: "Leonard Kirinya", role: "Photography" },
+  { name: "", role: "" }
 ];
 
 const secondTeam = [
-  { name: "Lewis", role: "Sound" },
-  { name: "Mark Mutugi", role: "Projections" },
-  { name: "...", role: "Socials" },
-  { name: "...", role: "Photography" },
-  { name: "Frank", role: "Cable and Stage management" }
+  { name: "", role: "" },
+  { name: "", role: "" },
+  { name: "...", role: "" },
+  { name: "...", role: "" },
+  { name: "", role: "" }
 ];
 
 // ---------- BOT ANSWERS ----------
