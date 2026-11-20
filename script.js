@@ -1,3 +1,4 @@
+
 /*
 ==================================================
 CTT YOUTH MEDIA – All functionality
@@ -6,25 +7,26 @@ CTT YOUTH MEDIA – All functionality
 
 // ---------- EVENTS DATA ----------
 const events = [
-  
-{
-  title: "YT 2026 FESTIVAL",
-  date: "25-27th November",
-  description: "It’s time to step into your light! ✨🔥 Get ready for three unforgettable days of life-changing sessions, powerful worship, and next-level connection at the YT 2026 Festival!  
-Under the theme Arise & Shine (Isaiah 60:1), we’re gathering youth and teens from across the nation for an experience you don’t want to miss. Tag your squad, clear your calendar, and come ready to be transformed! 🙌🏽⚡  
+  {
+    title: "YT 2026 FESTIVAL",
+    date: "25-27th November",
+    description: `It’s time to step into your light! ✨🔥 Get ready for three unforgettable days of life-changing sessions, powerful worship, and next-level connection at the YT 2026 Festival!
+
+Under the theme Arise & Shine (Isaiah 60:1), we’re gathering youth and teens from across the nation for an experience you don’t want to miss. Tag your squad, clear your calendar, and come ready to be transformed! 🙌🏽⚡
+
 📅 Dates: 25th – 27th Nov, 2026
-⏰ Time: 8:00 AM – 5:00 PM",
-  image:"https://xsvudifkvccfyycgcjcv.supabase.co/storage/v1/object/public/product-images/CTT/UPCOMING%20EVENTS/IMG-20261120-WA0438.jpg"
-},
-{
-  title: "Color Fest Fun day",
-  date: "21st November",
-  description: "Ready to get messy? Join us for Color Fest Fun Day—a high-energy celebration of music, games, and epic bursts of color! Wear white, bring your crew, and get ready to dance, laugh, and glow from head to toe. Don't just watch the fun—become part of the canvas! 🌈🎉",
-  image:"https://xsvudifkvccfyycgcjcv.supabase.co/storage/v1/object/public/product-images/CTT/UPCOMING%20EVENTS/IMG-20261118-WA0216.jpg"
-}
+⏰ Time: 8:00 AM – 5:00 PM`,
+    image: "https://xsvudifkvccfyycgcjcv.supabase.co/storage/v1/object/public/product-images/CTT/UPCOMING%20EVENTS/IMG-20261120-WA0438.jpg"
+  },
+  {
+    title: "Color Fest Fun day",
+    date: "21st November",
+    description: "Ready to get messy? Join us for Color Fest Fun Day—a high-energy celebration of music, games, and epic bursts of color! Wear white, bring your crew, and get ready to dance, laugh, and glow from head to toe. Don't just watch the fun—become part of the canvas! 🌈🎉",
+    image: "https://xsvudifkvccfyycgcjcv.supabase.co/storage/v1/object/public/product-images/CTT/UPCOMING%20EVENTS/IMG-20261118-WA0216.jpg"
+  }
 ];
 
-// ---------- MEDIA TEAM DATA (Two separate arrays) ----------
+// ---------- MEDIA TEAM DATA ----------
 const firstTeam = [
   { name: "", role: "" },
   { name: "Mark Mutugi", role: "Livestream" },
@@ -61,49 +63,76 @@ const answers = [
   }
 ];
 
-// ---------- RENDER EVENTS (with clickable images and titles) ----------
-const eventsGrid = document.getElementById('eventsGrid');
+// ---------- RENDER EVENTS ----------
 function renderEvents() {
+  const eventsGrid = document.getElementById("eventsGrid");
+
+  if (!eventsGrid) {
+    console.error("CTT: eventsGrid element was not found in HTML.");
+    return;
+  }
+
   eventsGrid.innerHTML = events.map(event => {
-    // Image click: opens the image in a new tab
-    const imageLink = event.image; // or you could use a separate field: event.imageLink
-    const titleLink = event.url || null; // if url exists, title becomes a link
+    const imageLink = event.image;
+    const titleLink = event.url || null;
 
     return `
       <article class="event-card">
         <a href="${imageLink}" target="_blank" rel="noopener noreferrer">
-          <img src="${event.image}" alt="${event.title}" loading="lazy" />
+          <img
+            src="${imageLink}"
+            alt="${event.title}"
+            loading="lazy"
+            onerror="this.style.display='none'; this.parentElement.insertAdjacentHTML('beforeend', '<div class=\\'image-error\\'>Event image unavailable</div>')"
+          />
         </a>
+
         <div class="event-body">
           <div class="event-date">${event.date}</div>
-          ${titleLink 
-            ? `<h3><a href="${titleLink}" target="_blank" rel="noopener noreferrer" style="color: var(--red); text-decoration: underline; transition: color 0.2s;" onmouseover="this.style.color='var(--red-dark)'" onmouseout="this.style.color='var(--red)'">${event.title}</a></h3>`
-            : `<h3>${event.title}</h3>`
+
+          ${
+            titleLink
+              ? `<h3><a href="${titleLink}" target="_blank" rel="noopener noreferrer">${event.title}</a></h3>`
+              : `<h3>${event.title}</h3>`
           }
-          <p>${event.description}</p>
+
+          <p>${event.description.replace(/\n/g, "<br>")}</p>
         </div>
       </article>
     `;
-  }).join('');
+  }).join("");
 }
 
-// ---------- RENDER TEAM (two grids) ----------
+// ---------- RENDER TEAM ----------
 function initials(name) {
-  return name.split(/\s+/).map(w => w[0]).join('').slice(0, 2).toUpperCase();
+  if (!name || !name.trim()) return "?";
+
+  return name
+    .trim()
+    .split(/\s+/)
+    .map(word => word[0])
+    .join("")
+    .slice(0, 2)
+    .toUpperCase();
 }
 
 function renderTeam() {
-  const gridFirst = document.getElementById('teamGridFirst');
-  const gridSecond = document.getElementById('teamGridSecond');
+  const gridFirst = document.getElementById("teamGridFirst");
+  const gridSecond = document.getElementById("teamGridSecond");
 
   function renderGrid(grid, team) {
+    if (!grid) {
+      console.error("CTT: A team grid element was not found.");
+      return;
+    }
+
     grid.innerHTML = team.map(person => `
       <article class="team-card">
         <div class="team-avatar">${initials(person.name)}</div>
         <h3>${person.name}</h3>
         <p>${person.role}</p>
       </article>
-    `).join('');
+    `).join("");
   }
 
   renderGrid(gridFirst, firstTeam);
@@ -113,79 +142,122 @@ function renderTeam() {
 // ---------- CHAT BOT ----------
 function botAnswer(question) {
   const q = question.toLowerCase().trim();
-  const match = answers.find(item => item.keys.some(key => q.includes(key)));
+
+  const match = answers.find(item =>
+    item.keys.some(key => q.includes(key))
+  );
+
   if (match) return match.answer;
+
   return "I can help with service timings, the first service, the second service, and upcoming events. Try asking me one of those.";
 }
 
-const chatMessages = document.getElementById('chatMessages');
-const chatForm = document.getElementById('chatForm');
-const chatInput = document.getElementById('chatInput');
-
 function addMessage(text, type) {
-  const div = document.createElement('div');
+  const chatMessages = document.getElementById("chatMessages");
+
+  if (!chatMessages) return;
+
+  const div = document.createElement("div");
   div.className = `message ${type}`;
-  div.innerHTML = `<b>${type === 'bot' ? 'CTT Bot' : 'You'}</b><span>${text}</span>`;
+
+  const heading = document.createElement("b");
+  heading.textContent = type === "bot" ? "CTT Bot" : "You";
+
+  const content = document.createElement("span");
+  content.textContent = text;
+
+  div.appendChild(heading);
+  div.appendChild(content);
+
   chatMessages.appendChild(div);
   chatMessages.scrollTop = chatMessages.scrollHeight;
 }
 
 function ask(question) {
-  addMessage(question, 'user');
-  setTimeout(() => addMessage(botAnswer(question), 'bot'), 250);
+  addMessage(question, "user");
+
+  setTimeout(() => {
+    addMessage(botAnswer(question), "bot");
+  }, 250);
 }
 
-// Chat form submit
-chatForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const q = chatInput.value.trim();
-  if (!q) return;
-  ask(q);
-  chatInput.value = '';
-});
+// ---------- INITIALIZE AFTER HTML LOADS ----------
+document.addEventListener("DOMContentLoaded", () => {
 
-// Quick questions
-document.querySelectorAll('.quick-questions button').forEach(btn => {
-  btn.addEventListener('click', () => ask(btn.dataset.question));
-});
+  // Chat form
+  const chatForm = document.getElementById("chatForm");
+  const chatInput = document.getElementById("chatInput");
 
-// ---------- THEME TOGGLE ----------
-const themeToggle = document.getElementById('themeToggle');
-const themeIcon = document.getElementById('themeIcon');
+  if (chatForm && chatInput) {
+    chatForm.addEventListener("submit", e => {
+      e.preventDefault();
 
-function getTheme() {
-  return document.documentElement.dataset.theme || 'light';
-}
+      const q = chatInput.value.trim();
 
-function setTheme(theme) {
-  if (theme === 'dark') {
-    document.documentElement.dataset.theme = 'dark';
-    localStorage.setItem('ctt-theme', 'dark');
-  } else {
-    delete document.documentElement.dataset.theme;
-    localStorage.setItem('ctt-theme', 'light');
+      if (!q) return;
+
+      ask(q);
+      chatInput.value = "";
+    });
   }
-  updateIcon();
-}
 
-function updateIcon() {
-  themeIcon.textContent = getTheme() === 'dark' ? '☀️' : '🌑';
-}
+  // Quick questions
+  document.querySelectorAll(".quick-questions button").forEach(btn => {
+    btn.addEventListener("click", () => {
+      ask(btn.dataset.question || "");
+    });
+  });
 
-// Load saved theme
-const saved = localStorage.getItem('ctt-theme');
-if (saved === 'dark') setTheme('dark');
-else setTheme('light');
+  // Theme toggle
+  const themeToggle = document.getElementById("themeToggle");
+  const themeIcon = document.getElementById("themeIcon");
 
-themeToggle.addEventListener('click', () => {
-  setTheme(getTheme() === 'dark' ? 'light' : 'dark');
+  function getTheme() {
+    return document.documentElement.dataset.theme || "light";
+  }
+
+  function updateIcon() {
+    if (themeIcon) {
+      themeIcon.textContent = getTheme() === "dark" ? "☀️" : "🌑";
+    }
+  }
+
+  function setTheme(theme) {
+    if (theme === "dark") {
+      document.documentElement.dataset.theme = "dark";
+      localStorage.setItem("ctt-theme", "dark");
+    } else {
+      delete document.documentElement.dataset.theme;
+      localStorage.setItem("ctt-theme", "light");
+    }
+
+    updateIcon();
+  }
+
+  // Load saved theme
+  const saved = localStorage.getItem("ctt-theme");
+  setTheme(saved === "dark" ? "dark" : "light");
+
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      setTheme(getTheme() === "dark" ? "light" : "dark");
+    });
+  }
+
+  // Last updated
+  const lastUpdated = document.getElementById("lastUpdated");
+
+  if (lastUpdated) {
+    lastUpdated.textContent = new Date().toLocaleDateString("en-GB", {
+      day: "numeric",
+      month: "long",
+      year: "numeric"
+    });
+  }
+
+  // Render content
+  renderEvents();
+  renderTeam();
+
+  console.log("CTT Youth Media: Website functionality initialized successfully.");
 });
-
-// ---------- LAST UPDATED ----------
-document.getElementById('lastUpdated').textContent = new Date().toLocaleDateString('en-GB', {
-  day: 'numeric', month: 'long', year: 'numeric'
-});
-
-// ---------- INIT ----------
-renderEvents();
-renderTeam();
