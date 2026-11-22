@@ -28,18 +28,18 @@ Under the theme Arise & Shine (Isaiah 60:1), we’re gathering youth and teens f
 
 // ---------- MEDIA TEAM DATA ---------
 const firstTeam = [
-  { name: "", role: "" },
-  { name: "Mark Mutugi", role: "Livestream" },
-  { name: "Victor Praise", role: "Photography" },
-  { name: "Leonard Kirinya", role: "Photography" },
-  { name: "Calvin", role: "Photography" }
+  { name: "Lewis", role: "Sound" },
+  { name: "Calvin", role: "Projections"},
+  { name: "Chris", role: "Stage Management" },
+  { name: "Lewiy", role: "Note Taking" },
+  { name: "", role: "" }
 ];
 
 const secondTeam = [
-  { name: "", role: "" },
-  { name: "", role: "" },
-  { name: "...", role: "" },
-  { name: "...", role: "" },
+  { name: "Leonard", role: "Sound" },
+  { name: "Josh/Chirs", role: "Projections" },
+  { name: "Calvin", role: "Stage Management" },
+  { name: "Lewis", role: "Note Taking" },
   { name: "", role: "" }
 ];
 
